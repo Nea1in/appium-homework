@@ -54,7 +54,11 @@ public class SearchScreen {
                 .click();
     }
 
+    // please watch the naming to comply the inner logic
+    // it helps to debug if some issue occurs
+    // method says "checklinkCONTAININGtext", but actual xpath uses EQUAL approach
     public void checkLinkContainingText(String text) {
+        // must be with CONTAINS: $(By.xpath("//android.widget.TextView[contains(@text, '" + text + "')]"))
         $(By.xpath("//android.widget.TextView[@text='" + text + "']"))
                 .shouldBe(Condition.visible);
     }

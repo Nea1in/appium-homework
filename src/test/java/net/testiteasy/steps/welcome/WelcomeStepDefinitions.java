@@ -24,6 +24,8 @@ public class WelcomeStepDefinitions {
         mainScreen.checkSearchWikipediaField();
     }
 
+    // not sure if it is a problem, but tap on search is not looking like Welcome Step.
+    // Maybe we could create a new MainScreenStep
     @When("user tap on the search field")
     public void userTapOnTheSearchField() {
         mainScreen.clickOnSearchField();
